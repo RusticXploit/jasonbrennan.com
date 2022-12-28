@@ -2,12 +2,12 @@
 layout: "../../../layouts/HomeLab.astro"
 title: "Proxmox"
 description: ""
-pubDate: "Nov 25 2022"
-draft: true
+pubDate: "Dec 27 2022"
 ---
 Network: 10.6.6.1/24 - DMZ  
 VLAN ID: 600  
-IP: 10.6.6.5
+IP: 10.6.6.5  
+WebUI: https://10.6.6.5:8006
 
 
 # Installation  
