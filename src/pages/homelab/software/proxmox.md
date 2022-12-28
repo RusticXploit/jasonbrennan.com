@@ -9,8 +9,7 @@ VLAN ID: 600
 IP: 10.6.6.5  
 WebUI: https://10.6.6.5:8006
 
-
-# Installation  
+## Installation  
 The Proxmox bare-metal ISO installer doesn't work for me. Instead, I have to install it over the top of Debian.
 
 ## Debian 11.5 - Bullseye
