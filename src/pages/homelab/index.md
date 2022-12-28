@@ -6,7 +6,7 @@ pubDate: "Dec 27 2022"
 ---
 
 # Software
-- [Proxmox](software/proxmox)
+- [Proxmox](/homelab/software/proxmox)
 - TrueNAS
 - Jellyfin
 - Plex

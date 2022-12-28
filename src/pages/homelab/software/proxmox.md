@@ -87,9 +87,6 @@ Adding the following helps to ensure that the `/usr/sbin` is added to `$PATH` fo
 ```
 su;
 echo 'export PATH=$PATH:/usr/sbin' > /bin/bash && source /root/.bashrc;
-```
-
-```
 update-grub && exit;
 ```
 
