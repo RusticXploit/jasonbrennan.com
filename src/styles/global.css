@@ -33,20 +33,20 @@ p {
  }
 
 html {
-    overflow-y: scroll;
-    height: 100%;
-    font: 100%/1.5 sans-serif;
-    word-wrap: break-word;
-    margin: 0 auto;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
- }
+  overflow-y: scroll;
+  height: 100%;
+  font: 100%/1.5 sans-serif;
+  word-wrap: break-word;
+  margin: 0 auto;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
 
 @media (min-width: 768px) {
-    html {
-        font-size: 125%;
-        max-width: 42em;
- } }
+  html {
+    max-width: 66em;
+  }
+}
 
 h1 {
   font-size: 1.75em;
