@@ -32,13 +32,10 @@ sudo dd if=~/Downloads/debian-11.5.0-amd64-netinst.iso of=/dev/sdX status=progre
 Insert the USB disk into the machine and boot from it. Follow the prompts to provision and install on the desired disk or disks.
 
 ### Network
-Remove the line below from `/etc/hosts`
-```
-127.0.1.1 debian.local_domain debian
-```
-And replace it with
-```
-10.6.6.5 inf-thor.jasonbrennan.com inf-thor
+Make the following change to `/etc/hosts`
+``` diff
+- 127.0.1.1 debian.local_domain debian
++ 10.6.6.5 inf-thor.jasonbrennan.com inf-thor
 ```
 
 ## Proxmox 7.3
