@@ -1,10 +1,11 @@
 // $char: #292929;
 :root {
-  --background-light: #c6c6e8;
-  --background-dark: #4545ea;
-  --link: #256c18;
-  --bg-gradient: var(--background-light), var(--background-dark);
-  --radius: .5em;
+  --background-dark: #8A2387;
+  --background-medium: #E94057;
+  --background-light: #F27121;
+  --link: #ffffff;
+  --bg-gradient: var(--background-light), var(--background-medium), var(--background-dark);
+  --radius: .4em;
 }
 
 * {
@@ -21,6 +22,7 @@ html {
   margin: 0 auto;
   padding-left: 1.5em;
   padding-right: 1.5em;
+  color: #ffffff;
 
   @media (min-width: 1024px) {
     max-width: 66em;
@@ -29,7 +31,7 @@ html {
 
 body {
   background-attachment: fixed;
-  background-image:  url("data:image/svg+xml;utf8,<svg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'> <filter id='a'> <feTurbulence type='fractalNoise' baseFrequency='4' numOctaves='2' stitchTiles='stitch'/></filter> <rect width='100%' height='100%' filter='url(%23a)'/> </svg>"), radial-gradient(circle at 49% -14%, var(--bg-gradient));
+  background-image:  radial-gradient(circle at 49% -14%, var(--bg-gradient));
 }
 
 
@@ -51,16 +53,26 @@ h3,
 h4 {
   margin: 2.5rem 0 1.5rem 0;
   line-height: 1.25;
-  color: #333;
 }
 
 hr,
 p {
   margin-top: 1em;
 }
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
 
 a {
   color: var(--link);
+  text-decoration: underline;
+}
+
+ul {
+  padding-left: 1em;
 }
 
 code {
@@ -71,7 +83,7 @@ code {
 
 pre {
   border-radius: var(--radius);
-  border: 2px solid var(--background-light);
+  border: 1px solid var(--background-light);
 	padding: 1rem;
 	background-color: #2b3748 !important;
   > code {
@@ -82,9 +94,8 @@ pre {
 
 // bg-blue-50 p-2 rounded mb-4 border border-blue-500 text-blue-600
 .message {
-  background-color: var(--background-dark);
-  border: 2px solid var(--background-light);
-  color: var(--background-light);
+  background-color: rgba(255,255,255,.2);
+  color: #ffffff;
   border-radius: var(--radius);
   padding: 1rem;
 }
