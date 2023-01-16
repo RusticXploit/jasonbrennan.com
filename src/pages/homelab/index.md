@@ -10,7 +10,7 @@ pubDate: "Dec 27 2022"
 - TrueNAS
 - Jellyfin
 - Plex
-- Emby
 - MakeMKV
 - PiHole
+- Bind
 

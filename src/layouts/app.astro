@@ -12,9 +12,11 @@ const { title, description } = Astro.props;
 		<BaseHead title={title} description={description} />
 	</head>
 
-	<body class="container mx-auto bg-slate-300 bg-noise">
+	<body>
 		<Header />
-		<main>
+		<main
+      class="container mx-auto mt-6"
+    >
       <slot />
 		</main>
 		<Footer />
