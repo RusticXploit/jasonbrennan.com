@@ -1,5 +1,6 @@
 ---
 import App from '/src/layouts/app.astro'
+import Experience from '/src/pages/partial/experience.md'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
@@ -11,11 +12,35 @@ const posts = (await Astro.glob('./journal/*.{md,mdx}'))
 ---
 
 <App>
-  <section>
-    <ul>
+  <section class="grid grid-rows-auto sm:grid-cols-3 gap-x-2">
+    <div>
+      <h3>Fullstack Software</h3>
+      <p>As a full stack software developer; I use PHP, Laravel, Node.js, and Vue.js to quickly build dynamic and powerful web applications that make a real impact in the world.</p>
+    </div>
+    <div> 
+      <h3>Systems &amp; Networks</h3>
+      <p>Being a systems and network admin is the perfect blend of utilizing my technical skills and quenching my thirst for problem-solving, all while keeping the gears of the company running smoothly - it's a total blast!</p>
+    </div>
+    <div> 
+      <h3>Infosec &amp; Privacy</h3>
+      <p>As a software developer, I am passionate about information security because it allows me to create innovative and useful technology, while also understanding how to protect users' data and privacy in a constantly evolving digital landscape.</p>
+    </div>
+  </section>
+
+  <h2>Experience</h2>
+  <hr class="mb-4 mt-1" />
+
+  <section
+    class="experience"
+  >
+    <Experience />
+  </section>
+  <section class="mt-8">
+    <ul class="pl-0">
       {
         posts.map((post) => (
-          <li>
+          <li class="mb-2">
+            <a href={post.url}><h4>{post.frontmatter.title}</h4></a> &mdash;
             <time datetime={post.frontmatter.pubDate}>
               {new Date(post.frontmatter.pubDate).toLocaleDateString('en-us', {
                 year: 'numeric',
@@ -23,10 +48,10 @@ const posts = (await Astro.glob('./journal/*.{md,mdx}'))
                 day: 'numeric',
               })}
             </time>
-            <a href={post.url}>{post.frontmatter.title}</a>
           </li>
         ))
       }
     </ul>
   </section>
 </App>
+
