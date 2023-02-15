@@ -8,9 +8,7 @@ pubDate: "Dec 27 2022"
 # Software
 - [Proxmox](/homelab/software/proxmox)
 - TrueNAS
-- Jellyfin
-- Plex
-- Emby
+- [Jellyfin](/homelab/software/jellyfin)
 - MakeMKV
 - PiHole
 
