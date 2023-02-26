@@ -19,8 +19,12 @@ Install hivexget
 sudo apt install libhivex-bin
 ```
 
-Recover the key
+Move to the mounted drive
+``` bash
+cd /mnt/{$SomeFolder}
+```
 
+Recover the key
 ``` bash
 hivexget Windows/System32/config/SOFTWARE '\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform' BackupProductKeyDefault
 ```
