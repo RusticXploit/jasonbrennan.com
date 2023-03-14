@@ -4,6 +4,9 @@ set shiftwidth=2
 
 au BufReadPost *.vue set syntax=html
 au BufReadPost *.astro set syntax=html
+au BufReadPost *.PRG   set syntax=nasm
+
+autocmd BufEnter * :syntax sync fromstart
 
 set undofile
 set undolevels=1000
