@@ -66,19 +66,21 @@ const try_hack_me = await fetch('https://tryhackme.com/api/all-completed-rooms?u
       >Try Hack Me Rooms Completed</a>
     </h3>
     <p>Top {percent}% of users</p>
-    {try_hack_me.map((event) => (
-      <div
-        class="flex flex-col mb-2 border-b border-1 py-2"
-      >
-        <strong>{event.title}</strong>
-        <div class="flex flex-row">
-          <img class="w-1/5 mr-4" src={event.image} />
+    <div
+      class="grid sm:grid-cols-3 gap-2"
+    >
+      {try_hack_me.map((event) => (
+        <div
+          class="flex flex-col border rounded-lg py-2 px-4"
+        >
+          <strong>{event.title}</strong>
+          <img class="" src={event.image} />
           <div class="w-4/5">
            {event.description}
           </div>
         </div>
-      </div>
-    ))}
+      ))}
+    </div>
 
     </div>
   </section>
