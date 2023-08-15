@@ -1,5 +1,5 @@
 ---
-import App from '/src/layouts/app.astro'
+import App from '/src/layouts/app.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
@@ -9,35 +9,10 @@ const posts = (await Astro.glob('./journal/*.{md,mdx}'))
 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
 );
 
-const rank = await fetch('https://tryhackme.com/api/user/rank/RusticXploit').then(async res => {
-  let json = await res.json()
-  return json.userRank
-})
-
-const participents = await fetch('https://tryhackme.com/api/site-stats').then(async res => {
-  let json = await res.json()
-  return json.totalUsers
-})
-console.log(rank, participents)
-const percent = ((rank / participents) * 100).toFixed(0)
-
-const try_hack_me = await fetch('https://tryhackme.com/api/all-completed-rooms?username=RusticXploit&limit=1000&page=1').then(async res => {
-  let data = await res.json()
-  let sorted = data.sort((a,b) => {
-    if (a.title > b.title) {
-      return 1;
-    }
-    if (a.title < b.title) {
-      return -1;
-    }
-    return 0;
-  })
-  return sorted
-})
 ---
 
 <App>
-  <section>
+  <section class="container mx-auto">
     <ul>
       {
         posts.map((post) => (
@@ -54,34 +29,5 @@ const try_hack_me = await fetch('https://tryhackme.com/api/all-completed-rooms?u
         ))
       }
     </ul>
-  </section>
-  <section class="my-6">
-    <h3
-      class="text-2xl"
-    >
-      <a
-        target="_blank"
-        class="underline"
-        href="https://tryhackme.com/p/RusticXploit"
-      >Try Hack Me Rooms Completed</a>
-    </h3>
-    <p>Top {percent}% of users</p>
-    <div
-      class="grid sm:grid-cols-3 gap-2"
-    >
-      {try_hack_me.map((event) => (
-        <div
-          class="flex flex-col border rounded-lg py-2 px-4"
-        >
-          <strong>{event.title}</strong>
-          <img class="" src={event.image} />
-          <div class="w-4/5">
-           {event.description}
-          </div>
-        </div>
-      ))}
-    </div>
-
-    </div>
   </section>
 </App>

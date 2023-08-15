@@ -22,19 +22,11 @@ html {
   margin: 0 auto;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  color: #ffffff;
 
   @media (min-width: 1024px) {
     max-width: 66em;
   }
 }
-
-body {
-  background-size: cover;
-  background-image:  radial-gradient(circle at 49% -14%, var(--bg-gradient));
-}
-
-
 
 h1 {
   font-size: 2em;
