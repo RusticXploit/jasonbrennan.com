@@ -5,8 +5,11 @@ description: "Why have I chosen to call this a web log and not a Blog."
 pubDate: "Nov 18 2022"
 ---
 
-I just need a place to keep my notes on a semi frequent basis. 
+import Paragraph from '/src/components/paragraph.astro';
+import H1 from '/src/components/h1.astro';
+export const components = {p: Paragraph, h1: H1}
 
+I just need a place to keep my notes on a semi frequent basis. 
 ## And that means:
 
 * This isn't going to be pretty; at least not yet.
